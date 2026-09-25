@@ -44,6 +44,10 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16_start = new System.Windows.Forms.Button();
+            this.buttonSaveTest = new System.Windows.Forms.Button();
+            this.buttonsavetrainSampleClick = new System.Windows.Forms.Button();
+            this.numericUpDown_NecessaryOutput = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NecessaryOutput)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -213,18 +217,48 @@
             // 
             // button16_start
             // 
-            this.button16_start.Location = new System.Drawing.Point(239, 12);
+            this.button16_start.Location = new System.Drawing.Point(194, 24);
             this.button16_start.Name = "button16_start";
             this.button16_start.Size = new System.Drawing.Size(89, 47);
             this.button16_start.TabIndex = 15;
             this.button16_start.Text = "Start";
             this.button16_start.UseVisualStyleBackColor = true;
             // 
+            // buttonSaveTest
+            // 
+            this.buttonSaveTest.Location = new System.Drawing.Point(12, 345);
+            this.buttonSaveTest.Name = "buttonSaveTest";
+            this.buttonSaveTest.Size = new System.Drawing.Size(89, 60);
+            this.buttonSaveTest.TabIndex = 16;
+            this.buttonSaveTest.Text = "Тест Пример";
+            this.buttonSaveTest.UseVisualStyleBackColor = true;
+            this.buttonSaveTest.Click += new System.EventHandler(this.buttonSaveTest_Click);
+            // 
+            // buttonsavetrainSampleClick
+            // 
+            this.buttonsavetrainSampleClick.Location = new System.Drawing.Point(132, 345);
+            this.buttonsavetrainSampleClick.Name = "buttonsavetrainSampleClick";
+            this.buttonsavetrainSampleClick.Size = new System.Drawing.Size(94, 60);
+            this.buttonsavetrainSampleClick.TabIndex = 17;
+            this.buttonsavetrainSampleClick.Text = "обучающий пример";
+            this.buttonsavetrainSampleClick.UseVisualStyleBackColor = true;
+            this.buttonsavetrainSampleClick.Click += new System.EventHandler(this.buttonsavetrainSampleClick_Click);
+            // 
+            // numericUpDown_NecessaryOutput
+            // 
+            this.numericUpDown_NecessaryOutput.Location = new System.Drawing.Point(12, 226);
+            this.numericUpDown_NecessaryOutput.Name = "numericUpDown_NecessaryOutput";
+            this.numericUpDown_NecessaryOutput.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDown_NecessaryOutput.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown_NecessaryOutput);
+            this.Controls.Add(this.buttonsavetrainSampleClick);
+            this.Controls.Add(this.buttonSaveTest);
             this.Controls.Add(this.button16_start);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -243,6 +277,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NecessaryOutput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,6 +300,9 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16_start;
+        private System.Windows.Forms.Button buttonSaveTest;
+        private System.Windows.Forms.Button buttonsavetrainSampleClick;
+        private System.Windows.Forms.NumericUpDown numericUpDown_NecessaryOutput;
     }
 }
 
