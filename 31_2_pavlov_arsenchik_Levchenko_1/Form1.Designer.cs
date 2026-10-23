@@ -47,6 +47,9 @@
             this.buttonSaveTest = new System.Windows.Forms.Button();
             this.buttonsavetrainSampleClick = new System.Windows.Forms.Button();
             this.numericUpDown_NecessaryOutput = new System.Windows.Forms.NumericUpDown();
+            this.buttonRecognaize = new System.Windows.Forms.Button();
+            this.labelOutput = new System.Windows.Forms.Label();
+            this.labelPromobility = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NecessaryOutput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -251,11 +254,44 @@
             this.numericUpDown_NecessaryOutput.Size = new System.Drawing.Size(49, 20);
             this.numericUpDown_NecessaryOutput.TabIndex = 18;
             // 
+            // buttonRecognaize
+            // 
+            this.buttonRecognaize.Location = new System.Drawing.Point(194, 94);
+            this.buttonRecognaize.Name = "buttonRecognaize";
+            this.buttonRecognaize.Size = new System.Drawing.Size(100, 60);
+            this.buttonRecognaize.TabIndex = 19;
+            this.buttonRecognaize.Text = "button16";
+            this.buttonRecognaize.UseVisualStyleBackColor = true;
+            this.buttonRecognaize.Click += new System.EventHandler(this.buttonRecognaize_Click);
+            // 
+            // labelOutput
+            // 
+            this.labelOutput.AutoSize = true;
+            this.labelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelOutput.Location = new System.Drawing.Point(338, 24);
+            this.labelOutput.Name = "labelOutput";
+            this.labelOutput.Size = new System.Drawing.Size(101, 55);
+            this.labelOutput.TabIndex = 20;
+            this.labelOutput.Text = "Out";
+            // 
+            // labelPromobility
+            // 
+            this.labelPromobility.AutoSize = true;
+            this.labelPromobility.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPromobility.Location = new System.Drawing.Point(573, 24);
+            this.labelPromobility.Name = "labelPromobility";
+            this.labelPromobility.Size = new System.Drawing.Size(174, 31);
+            this.labelPromobility.TabIndex = 21;
+            this.labelPromobility.Text = "Вероятность";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPromobility);
+            this.Controls.Add(this.labelOutput);
+            this.Controls.Add(this.buttonRecognaize);
             this.Controls.Add(this.numericUpDown_NecessaryOutput);
             this.Controls.Add(this.buttonsavetrainSampleClick);
             this.Controls.Add(this.buttonSaveTest);
@@ -279,6 +315,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NecessaryOutput)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -303,6 +340,9 @@
         private System.Windows.Forms.Button buttonSaveTest;
         private System.Windows.Forms.Button buttonsavetrainSampleClick;
         private System.Windows.Forms.NumericUpDown numericUpDown_NecessaryOutput;
+        private System.Windows.Forms.Button buttonRecognaize;
+        private System.Windows.Forms.Label labelOutput;
+        private System.Windows.Forms.Label labelPromobility;
     }
 }
 

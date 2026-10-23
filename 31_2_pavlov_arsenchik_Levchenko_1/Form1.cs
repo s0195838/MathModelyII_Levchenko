@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _31_2_pavlov_arsenchik_Levchenko_1.NeuroNet;
 using System.IO;
 
 
@@ -16,10 +17,12 @@ namespace _31_2_pavlov_arsenchik_Levchenko_1
     {
             
         private double[] inputPixels;//массив входных данных
+        private Network network;
         public Form1()
         {
             InitializeComponent();
             inputPixels = new double[15];
+            network = new Network();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,5 +65,14 @@ namespace _31_2_pavlov_arsenchik_Levchenko_1
             File.AppendAllText(path, tmpStr);
             //C:\Users\Ryzen\source\repos\31_2_pavlov_arsenchik_Levchenko_1\31_2_pavlov_arsenchik_Levchenko_1\bin\Debug
         }
+
+        private void buttonRecognaize_Click(object sender, EventArgs e)
+        {
+            network.ForwardPass(inputPixels);
+            labelOutput.Text = network.Fact.ToList().IndexOf(network.Fact.Max()).ToString();
+            labelPromobility.Text = (100 * network.Fact.Max()).ToString("0.00") + " %";
+        }
+
+
     }
 }
